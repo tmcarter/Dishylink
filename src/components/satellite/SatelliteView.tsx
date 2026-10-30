@@ -27,6 +27,7 @@ import { SatelliteCallout, type SelectedSatellite } from "./SatelliteCallout";
 import { buildSatellite } from "./satelliteGeometry";
 import { createSkyScene, type ScreenPoint, type SkyScene } from "./skyScene";
 import { SkyControl } from "./SkyControl";
+import { OrbitTracker } from "./OrbitTracker";
 import { DomeIcon } from "../../assets/icons/DomeIcon";
 import { DomeCanopyIcon } from "../../assets/icons/DomeCanopyIcon";
 import { ImmersiveIcon } from "../../assets/icons/ImmersiveIcon";
@@ -83,6 +84,7 @@ export function SatelliteView({
   const calloutRef = useRef<HTMLDivElement | null>(null);
   const ringRef = useRef<HTMLSpanElement | null>(null);
   const [selected, setSelected] = useState<SelectedSatellite | null>(null);
+  const [trackedName, setTrackedName] = useState<string | null>(null);
   // Seeded from the scene as it is built, so the button reports the camera's
   // state rather than a copy of its default that can drift out of step.
   const [rotating, setRotating] = useState(false);
@@ -423,7 +425,15 @@ export function SatelliteView({
         />
       )}
 
-      <SatelliteCallout ref={calloutRef} selected={selected} onClose={() => setSelected(null)} />
+      <SatelliteCallout
+        ref={calloutRef}
+        selected={selected}
+        onClose={() => setSelected(null)}
+        onTrackOrbit={setTrackedName}
+      />
+      {trackedName && (
+        <OrbitTracker satelliteName={trackedName} onClose={() => setTrackedName(null)} />
+      )}
 
       <div className='absolute right-6 top-5 flex items-center gap-2'>
         <SkyControl

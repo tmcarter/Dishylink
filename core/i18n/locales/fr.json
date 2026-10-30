@@ -1430,5 +1430,21 @@
     "notificationsUndeliverable": "macOS ne délivre pas les notifications — autorisez Dishylink dans Réglages Système ▸ Notifications.",
     "notificationsDevRun": "Les notifications natives nécessitent l'application Dishylink installée ; une exécution de développement ne peut pas les afficher.",
     "signInTitle": "Se connecter à Starlink"
+  },
+  "orbit": {
+    "title": "Orbite de {{name}}",
+    "viewLabel": "Vue de l'orbite",
+    "mapView": "Trace au sol",
+    "globeView": "Orbite 3D",
+    "track": "Suivre l'orbite",
+    "loading": "Calcul de l'orbite…",
+    "notFound": "Ce satellite n'est pas dans le jeu d'éphémérides actuel.",
+    "period": "période",
+    "apogee": "apogée",
+    "perigee": "périgée",
+    "inclination": "inclinaison",
+    "eccentricity": "excentricité",
+    "latitude": "latitude",
+    "longitude": "longitude"
   }
 }

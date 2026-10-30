@@ -1398,5 +1398,21 @@
     "notificationsUndeliverable": "macOS stellt keine Benachrichtigungen zu – erlauben Sie Dishylink unter Systemeinstellungen ▸ Mitteilungen.",
     "notificationsDevRun": "Native Benachrichtigungen brauchen die installierte Dishylink-App; ein Entwicklungslauf kann sie nicht anzeigen.",
     "signInTitle": "Bei Starlink anmelden"
+  },
+  "orbit": {
+    "title": "Umlaufbahn von {{name}}",
+    "viewLabel": "Bahnansicht",
+    "mapView": "Bodenspur",
+    "globeView": "3D-Bahn",
+    "track": "Bahn verfolgen",
+    "loading": "Bahn wird berechnet…",
+    "notFound": "Dieser Satellit ist nicht im aktuellen Ephemeridensatz.",
+    "period": "Umlaufzeit",
+    "apogee": "Apogäum",
+    "perigee": "Perigäum",
+    "inclination": "Inklination",
+    "eccentricity": "Exzentrizität",
+    "latitude": "Breite",
+    "longitude": "Länge"
   }
 }

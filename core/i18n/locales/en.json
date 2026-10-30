@@ -1368,5 +1368,21 @@
     "notificationsUndeliverable": "macOS isn’t delivering notifications — allow Dishylink under System Settings ▸ Notifications.",
     "notificationsDevRun": "Native notifications need the installed Dishylink app; a dev run can’t post them.",
     "signInTitle": "Sign in to Starlink"
+  },
+  "orbit": {
+    "title": "Orbit of {{name}}",
+    "viewLabel": "Orbit view",
+    "mapView": "Ground track",
+    "globeView": "3D orbit",
+    "track": "Track orbit",
+    "loading": "Computing orbit…",
+    "notFound": "This satellite isn't in the current ephemeris set.",
+    "period": "period",
+    "apogee": "apogee",
+    "perigee": "perigee",
+    "inclination": "inclination",
+    "eccentricity": "eccentricity",
+    "latitude": "latitude",
+    "longitude": "longitude"
   }
 }

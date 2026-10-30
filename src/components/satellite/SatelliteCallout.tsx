@@ -17,8 +17,8 @@ export interface SelectedSatellite {
 
 export const SatelliteCallout = forwardRef<
   HTMLDivElement,
-  { selected: SelectedSatellite | null; onClose: () => void }
->(function SatelliteCallout({ selected, onClose }, ref) {
+  { selected: SelectedSatellite | null; onClose: () => void; onTrackOrbit?: (name: string) => void }
+>(function SatelliteCallout({ selected, onClose, onTrackOrbit }, ref) {
   const { t } = useTranslation();
   return (
     <div
@@ -68,6 +68,15 @@ export const SatelliteCallout = forwardRef<
                 : "—"}
             </span>
           </div>
+          {onTrackOrbit && (
+            <button
+              type='button'
+              className='mt-2 w-full cursor-pointer rounded border border-[#28282896] bg-transparent py-1 font-sans text-[11.5px] font-semibold text-foreground hover:bg-[#ffffff14]'
+              onClick={() => onTrackOrbit(selected.sky.name)}
+            >
+              {t("orbit.track")}
+            </button>
+          )}
         </>
       )}
     </div>

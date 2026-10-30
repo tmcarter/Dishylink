@@ -121,7 +121,7 @@ const normalise = (a: Vec3): Vec3 => {
   return [a[0] / length, a[1] / length, a[2] / length];
 };
 
-interface TleRecord {
+export interface TleRecord {
   name: string;
   line1: string;
   line2: string;
